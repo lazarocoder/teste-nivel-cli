@@ -1,27 +1,47 @@
 # TesteNivelCli
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.15.
 
-## Development server
+Bem-vindo ao Desafio Teste de nivel CLI! Este é um projeto Angular que apresenta [Uma interface de gerenciamento de contatos].
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+Este projeto foi gerado com [Angular CLI](https://github.com/angular/angular-cli) versão 9.1.15.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Pré-requisitos
+
+Certifique-se de ter o Node.js e o npm instalados antes de prosseguir.
+
+- [Node.js](https://nodejs.org/)
+- [npm](https://www.npmjs.com/)
+
+1. Clone este repositório:
+
+    ```bash
+    git clone https://github.com/lazarocoder/teste-nivel-cli.git
+    ```
+2. Navegue até o diretório do projeto:
+
+    ```bash
+    cd teste-nivel-cli
+    ```
+
+3. Instale as dependências:
+
+    ```bash
+    npm install
+    ```
+
+
+## Ambiente local
+
+Execute `ng serve/ng s --open` para rodar localmente. Navegue para `http://localhost:4200/`. A aplicação irá atualizar automaticamente de acordo com as mudanças no código fonte.
+
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Execute `ng build --prod` para gerar uma versão de produção. Os artefatos serão criandos na past `dist/`.
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Para mais informações
+Para conseguir mais ajuda sobre o  Angular CLI use `ng help` or vá até:  [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
