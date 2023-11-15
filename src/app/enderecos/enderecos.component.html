@@ -1,0 +1,70 @@
+<div class="row mb-5">
+    <div class="col-8">
+        <p class="h2 mb-3">Endereços</p>
+        <p class="h5 mb-3">Contato: {{ contato.nome }}</p>
+        <p class="h5 mb-3"><a routerLink="/contatos">Voltar</a></p>
+        <form #f="ngForm" (ngSubmit)="onSubmit()" autocomplete="off">
+            <div class="form-group">
+                <label>Logradouro</label>
+                <input type="text" id="logradouro" name="logradouro" class="form-control" [(ngModel)]="endereco.logradouro" required />
+            </div>
+            <div class="form-group">
+                <label>Cidade</label>
+                <input type="text" id="cidade" name="cidade" class="form-control" [(ngModel)]="endereco.cidade" required />
+            </div>
+            <div class="form-group">
+                <label>Estado</label>
+                <input type="text" id="estado" name="estado" class="form-control" [(ngModel)]="endereco.estado" required />
+            </div>
+            <div class="form-group">
+                <label>Cep</label>
+                <input type="text" id="cep" name="cep" class="form-control" [(ngModel)]="endereco.cep" required />
+            </div>
+            <button type="submit" class="btn btn-primary" [disabled]="!f.valid || loading">Salvar</button>
+        </form>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-12">
+        <div class="table-responsive">
+            <table class="table table-sm table-bordered table-hover">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Logradouro</th>
+                        <th>Cidade</th>
+                        <th>Estado</th>
+                        <th>Cep</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <ng-template ngFor let-endereco [ngForOf]="enderecos">
+                        <tr>
+                            <td>{{ endereco.id }}</td>
+                            <td>{{ endereco.logradouro }}</td>
+                            <td>{{ endereco.cidade }}</td>
+                            <td>{{ endereco.estado }}</td>
+                            <td>{{ endereco.cep }}</td>
+                            <td>
+                                <div class="btn-group-sm">
+                                    <button type="button" (click)="buscar(endereco)"
+                                        class="btn btn-primary m-1" [disabled]="endereco.btnDesabilitado">Buscar</button>
+
+                                    <button type="button" (click)="excluir(endereco.id)"
+                                        class="btn btn-danger m-1">Excluir</button>
+                                </div>
+                            </td>
+                        </tr>
+                    </ng-template>
+                    <tr *ngIf="!enderecos || enderecos.length < 1">
+                        <td class="tr-text-center" colspan="6">
+                            <h5>Nenhum dado a ser exibido.</h5>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
